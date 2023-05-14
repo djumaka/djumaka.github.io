@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, Verdana;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(237, 3, 32, 0.87) 20.8%, rgba(242, 121, 1, 0.84) 74.4%);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+a,
+a:visited,
+a:active {
+  color: white;
+}
+div.white_panel {
+  background-color: white;
+  color: #666;
+  padding: 10px;
+}
+#bg-blob {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 0px;
+  right: 0px;
+}
+div.info-box {
+  color: white;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 300px;
+}
+div.info-box h1.name {
+  opacity: 80%;
+  margin-top: 50px;
+  text-align: right;
+  font-size: 62px;
+}
+div.info-box p.right-p {
+  text-align: right;
+}
+.custom-shape-divider-bottom-1684070156 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 0;
+}
+.custom-shape-divider-bottom-1684070156 svg {
+  position: relative;
+  display: block;
+  width: calc(204% + 1.3px);
+  height: 149px;
+  transform: rotateY(180deg);
+}
+.custom-shape-divider-bottom-1684070156 .shape-fill {
+  fill: #FFFFFF;
+}
