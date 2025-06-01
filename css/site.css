@@ -1,3 +1,6 @@
+.name {
+  font-size: 50px;
+}
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -10,10 +13,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-dd {
-  margin: 0;
-  padding: 0;
-}
+dd,
 dl {
   margin: 0;
   padding: 0;
@@ -41,10 +41,7 @@ a {
   border-bottom: 1px solid #f8f8f6;
   text-decoration: none;
 }
-a:hover {
-  color: #fccd03;
-  border-bottom: 1px solid #fccd03;
-}
+a:hover,
 a:focus {
   color: #fccd03;
   border-bottom: 1px solid #fccd03;
@@ -64,7 +61,7 @@ a:focus {
 }
 .logo {
   background: url("../me-circle.png") no-repeat;
-  background-position: top left, top left;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: auto, auto 100%;
   width: 364px;
@@ -74,8 +71,18 @@ a:focus {
 }
 @media (max-width: 600px) {
   .logo {
+    background: url("../me-circle.png") no-repeat;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: auto, auto 100%;
     width: 364px;
     height: 364px;
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    height: 80vw;
+    background-size: contain;
+    margin: auto;
   }
   section {
     display: block;
@@ -104,36 +111,36 @@ a:focus {
   box-sizing: border-box;
   min-height: 100vh;
 }
-.column-section {
+.section.column-section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
 }
-.section-bio {
+.section.section-bio {
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
-.col-section {
+.section .col-section {
   width: 100%;
   max-width: 382px;
 }
-.bio {
+.section .bio {
   font-size: 20px;
   font-weight: 100;
   margin-bottom: -0.45em;
   max-width: 700px;
 }
-.list {
+.section .list {
   margin-top: 3.2em;
 }
-.list-item {
+.section .list-item {
   margin-top: 0.25em;
   margin-bottom: 2em;
 }
-.list-item:last-child {
+.section .list-item:last-child {
   margin-bottom: -0.4em;
 }
-.scrunch {
+.section .scrunch {
   z-index: -1;
   position: fixed;
   top: 0;
@@ -142,7 +149,7 @@ a:focus {
   height: 100vh;
   pointer-events: none;
 }
-.scrunch:after {
+.section .scrunch:after {
   background: #222222;
   content: "";
   position: absolute;
@@ -151,22 +158,6 @@ a:focus {
   display: block;
   width: 100%;
   height: 100%;
-}
-footer {
-  position: fixed;
-  right: 96px;
-  bottom: 92px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-align: end;
-  align-items: flex-end;
-}
-.footer-links {
-  margin-top: 1em;
-  line-height: 1;
 }
 @media (max-width: 1024px) {
   .section {
@@ -178,7 +169,7 @@ footer {
     bottom: 48px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 980px) {
   .section {
     padding: 7.5vw;
     width: 100%;
@@ -193,6 +184,39 @@ footer {
   }
   .footer-links {
     display: inline;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    position: fixed;
+    right: 96px;
+    bottom: 92px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+}
+.footer-links {
+  margin-top: 1em;
+  line-height: 1;
+}
+@media (max-width: 1024px) {
+  padding: 48px 0 48px 48px;
+  width: calc(100vw - 48px - 7em);
+  .footer {
+    right: 48px;
+  }
+}
+@media (max-width: 980px) {
+  padding: 7.5vw;
+  width: 100%;
+  .footer {
+    right: 0;
+    bottom: 0;
   }
 }
 @media (hover: hover) {
