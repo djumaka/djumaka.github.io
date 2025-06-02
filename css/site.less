@@ -10,6 +10,15 @@
 @color_desert_storm: #f8f8f6;
 @color_supernova: #fccd03;
 
+// Monokai Theme Colors
+@monokai_text: #F8F8F2;
+@monokai_comments: #75715E;
+@monokai_strings: #E6DB74;
+@monokai_numbers: #AE81FF;
+@monokai_keywords: #F92672;
+@monokai_variables: #A6E22E;
+@monokai_constants: #66D9EF;
+
 // Styles
 @body_font: 15px/1.5 "JetBrains Mono", Helvetica, sans-serif;
 @main_font: 500 20px/1 "JetBrains Mono", Helvetica, sans-serif;
@@ -187,6 +196,21 @@ a {
 		font-weight: @bio_font_weight;
 		margin-bottom: -0.45em;
 		max-width: 700px;
+		color: @monokai_text;
+		padding: 1em;
+		border-radius: 6px;
+	}
+
+	.yaml-key {
+		color: @monokai_keywords;
+	}
+
+	.yaml-subkey {
+		color: @monokai_variables;
+	}
+
+	.yaml-string {
+		color: @monokai_strings;
 	}
 
 	.list {

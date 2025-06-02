@@ -129,6 +129,18 @@ a:focus {
   font-weight: 100;
   margin-bottom: -0.45em;
   max-width: 700px;
+  color: #F8F8F2;
+  padding: 1em;
+  border-radius: 6px;
+}
+.section .yaml-key {
+  color: #F92672;
+}
+.section .yaml-subkey {
+  color: #A6E22E;
+}
+.section .yaml-string {
+  color: #E6DB74;
 }
 .section .list {
   margin-top: 3.2em;
