@@ -26,7 +26,7 @@
 @normal_font_weight: 400;
 @medium_font_weight: 500;
 @bio_font_size: 20px;
-@bio_font_size_alt: 18px;
+@bio_font_size_alt: 15px;
 @bio_font_weight: 100;
 @big_font_size: 50px;
 @zero: 0;
@@ -115,11 +115,10 @@ p {
 a {
 	color: inherit;
 	position: relative;
-	border-bottom: @border_style @color_desert_storm;
+	border-bottom: @border_style @monokai_keywords;
 	text-decoration: none;
 	&:hover, &:focus {
-		color: @color_supernova;
-		border-bottom: @border_style @color_supernova;
+		border-bottom: @border_style @monokai_variables;
 	}
 }
 
@@ -152,6 +151,11 @@ a {
 	section {
 		display: block;
 		min-height: @zero;
+
+    .bio {
+      padding-top: 15vw;
+      font-size: @bio_font_size_alt !important;
+    }
 	}
 
 	.column-section-main {
@@ -162,10 +166,7 @@ a {
 		margin-bottom: 15vw;
 	}
 
-	.bio {
-		padding-top: 15vw;
-		font-size: @bio_font_size_alt;
-	}
+	
 }
 
 .section {
